@@ -56,11 +56,11 @@ class UserFormFragment : Fragment() {
                             FirebaseConfig.getFireBaseStorage()
                                 .child("images")
                                 .child("profile")
-                                .child("perfil.jpeg")
+                                .child("${tiUserFormUserName.text.toString()}.jpeg")
                                 .apply {
                                     putBytes(image).also {
                                         addOnSuccessListener {
-                                            downloadUrl?.apply {
+                                            downloadUrl.apply {
                                                 addOnSuccessListener {photoUrl ->
                                                     FirebaseConfig.updateUser(
                                                         tiUserFormDescription.text.toString(),
@@ -98,7 +98,7 @@ class UserFormFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
-            var byteArrayOutputStream = ByteArrayOutputStream()
+            val byteArrayOutputStream = ByteArrayOutputStream()
             imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream)
             image = byteArrayOutputStream.toByteArray()
 

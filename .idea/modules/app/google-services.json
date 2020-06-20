@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "401130869568",
+    "firebase_url": "https://helppet-9bfec.firebaseio.com",
+    "project_id": "helppet-9bfec",
+    "storage_bucket": "helppet-9bfec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401130869568:android:acecc11080692aa70be0a5",
+        "android_client_info": {
+          "package_name": "com.hefesto.helppet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401130869568-du5dij9oedpeqeoa4t0cf629dk6n6vts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hefesto.helppet",
+            "certificate_hash": "bafd40c5496fbf3de673721e8f9efb52749677ac"
+          }
+        },
+        {
+          "client_id": "401130869568-9cukpgapt6r3qr4h8lrel2aeeapgs90c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgN6anenoZC_Vb45xWFiolUgyxl7hwab0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401130869568-9cukpgapt6r3qr4h8lrel2aeeapgs90c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
