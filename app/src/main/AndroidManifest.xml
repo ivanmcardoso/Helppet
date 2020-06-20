@@ -24,7 +24,7 @@
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />
 
-        <activity android:name=".ongs"></activity>
+        <activity android:name=".activity.OngsActivity" android:parentActivityName=".activity.HomeActivity"></activity>
         <activity android:name=".denuncia" />
         <activity android:name=".activity.LoginActivity"
             android:launchMode="singleTop">
