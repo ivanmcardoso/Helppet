@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".denuncia">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMO DENUNCIAR ABANDONO, MAUS TRATOS, ENVENENAMENTO E QUALQUER CRIME CONTRA ANIMAIS"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_list1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:text="1 - Para denunciar basta acessar o endereço\neletrônico"
+        android:textColor="#727272"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linkDelegaciaInterativa"
+        android:textColor="#727272"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_list1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_list1" />
+
+    <TextView
+        android:id="@+id/tv_list2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aba"
+        android:textColor="#727272"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/link"
+        app:layout_constraintTop_toBottomOf="@+id/link" />
+
+    <TextView
+        android:id="@+id/tv_list3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 - Preencher os dados da ocorrência"
+        android:textColor="#727272"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_list2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_list2" />
+
+    <TextView
+        android:id="@+id/tv_list4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="368dp"
+        android:gravity="center"
+        android:text="@string/dados"
+        android:textColor="#727272"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:text="ONGS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

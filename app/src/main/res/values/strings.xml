@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Helppet</string>
+    <string name="linkDelegaciaInterativa">
+        <a href="https://www.delegaciainterativa.am.gov.br/">www.delegaciainterativa.am.gov.br</a>
+    </string>
+    <string name="aba">2 - Ir na aba denominada <b>Crime contra\nanimais</b></string>
+    <string name="dados">Posteriormente, as denúncias são\nencaminhadas para a Delegacia\nEspecializada em crimes contra\no meio ambiente (DEMA), que\ninvestiga as ocorrências.</string>
     <string name="feed">feed</string>
     <string name="profile">profile</string>
     <string name="info">info</string>
