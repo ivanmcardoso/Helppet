@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStartUserForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEndUserForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <ImageView
+            android:id="@+id/ivUserFormProfilePhoto"
+            android:layout_width="283dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="@string/profile"
+            app:layout_constraintBottom_toTopOf="@+id/tilUserFormUserName"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEndUserForm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStartUserForm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUserFormUserName"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/tilUserFormPassword"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEndUserForm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStartUserForm"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserFormProfilePhoto">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiUserFormUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUserFormPassword"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/tilUserFormDescription"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEndUserForm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStartUserForm"
+            app:layout_constraintTop_toBottomOf="@+id/tilUserFormUserName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiUserFormPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/senha" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUserFormDescription"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/btUserFormSubmit"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEndUserForm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStartUserForm"
+            app:layout_constraintTop_toBottomOf="@+id/tilUserFormPassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiUserFormDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btUserFormSubmit"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEndUserForm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStartUserForm"
+            app:layout_constraintTop_toBottomOf="@+id/tilUserFormDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
