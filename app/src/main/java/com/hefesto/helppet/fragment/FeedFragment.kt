@@ -6,6 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hefesto.helppet.R
+import com.hefesto.helppet.adapter.PostAdapter
+import com.hefesto.helppet.model.Post
+import kotlinx.android.synthetic.main.fragment_feed.*
+import java.util.*
 
 class FeedFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
@@ -13,5 +17,15 @@ class FeedFragment: Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        var postList = fillPostList()
+        rvPosts.adapter = PostAdapter(postList){}
     }
+
+    fun fillPostList() = mutableListOf<Post>(
+        Post("Susan Su",
+                Date(),
+            "Vi este dog, na esquina da Rua 3, eu alimentei e esta com uma pata ferida.",
+            "abandoned"
+        )
+    )
 }

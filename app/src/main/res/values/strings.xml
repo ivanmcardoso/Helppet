@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Helppet</string>
+    <string name="linkDelegaciaInterativa">
+        <a href="https://www.delegaciainterativa.am.gov.br/">www.delegaciainterativa.am.gov.br</a>
+    </string>
+    <string name="aba">2 - Ir na aba denominada <b>Crime contra\nanimais</b></string>
+    <string name="dados">Posteriormente, as denúncias são\nencaminhadas para a Delegacia\nEspecializada em crimes contra\no meio ambiente (DEMA), que\ninvestiga as ocorrências.</string>
     <string name="feed">feed</string>
     <string name="profile">profile</string>
     <string name="info">info</string>
@@ -7,4 +12,13 @@
     <string name="bem_vindo_a_ao_helppet">Bem-Vindo(a) ao Helppet!</string>
     <string name="seja_um_salvador">SEJA UM SALVADOR</string>
     <string name="seja_um_acolhedor">SEJA UM ACOLHEDOR</string>
+    <string name="foto_do_pet">Foto do Pet</string>
+    <string name="username">Username</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="criar_nova_conta">Criar nova conta</string>
+    <string name="description">Descrição</string>
+    <string name="name">Nome</string>
+    <string name="send">Enviar</string>
 </resources>
