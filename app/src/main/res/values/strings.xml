@@ -13,12 +13,10 @@
     <string name="seja_um_salvador">SEJA UM SALVADOR</string>
     <string name="seja_um_acolhedor">SEJA UM ACOLHEDOR</string>
     <string name="foto_do_pet">Foto do Pet</string>
-    <string name="username">Username</string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="entrar">Entrar</string>
     <string name="criar_nova_conta">Criar nova conta</string>
-    <string name="description">Descrição</string>
     <string name="name">Nome</string>
     <string name="send">Enviar</string>
 </resources>

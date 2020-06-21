@@ -17,11 +17,11 @@ class FeedFragment: Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        var postList = fillPostList()
+        val postList = fillPostList()
         rvPosts.adapter = PostAdapter(postList){}
     }
 
-    fun fillPostList() = mutableListOf<Post>(
+    private fun fillPostList() = mutableListOf(
         Post("Susan Su",
                 Date(),
             "Vi este dog, na esquina da Rua 3, eu alimentei e esta com uma pata ferida.",

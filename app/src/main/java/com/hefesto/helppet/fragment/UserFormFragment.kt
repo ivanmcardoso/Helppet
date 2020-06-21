@@ -3,25 +3,18 @@ package com.hefesto.helppet.fragment
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.UserProfileChangeRequest
 import com.hefesto.helppet.R
 import com.hefesto.helppet.config.FirebaseConfig
 import com.hefesto.helppet.utils.isFilled
 import com.hefesto.helppet.utils.shortToast
-import kotlinx.android.synthetic.main.fragment_perfil.*
 import kotlinx.android.synthetic.main.fragment_user_form.*
-import kotlinx.android.synthetic.main.list_item_post.*
 import java.io.ByteArrayOutputStream
-import java.net.URI
 
 class UserFormFragment : Fragment() {
     private var image: ByteArray = byteArrayOf()
@@ -95,7 +88,7 @@ class UserFormFragment : Fragment() {
         }
     }
 
-    fun failure() {
+    private fun failure() {
         pbUserForm.visibility = View.GONE
         shortToast("falha")
     }

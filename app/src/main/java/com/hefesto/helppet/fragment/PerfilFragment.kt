@@ -19,7 +19,7 @@ class PerfilFragment: Fragment() {
         FirebaseConfig.getCurrentUser()?.let {
             tvProfileName.text = it.displayName
             tvProfileDescription.text = "Hi! My name is ${it.displayName} and i love pets."
-            var photoUrl = it.photoUrl
+            val photoUrl = it.photoUrl
             Picasso.get().load(photoUrl).into(ivProfileProfilePicture)
         }
     }

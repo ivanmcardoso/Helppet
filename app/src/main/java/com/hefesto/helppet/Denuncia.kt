@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 
-class denuncia : AppCompatActivity() {
+class Denuncia : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_denuncia)
-        val text = findViewById(R.id.link) as TextView
-        text.setMovementMethod(LinkMovementMethod.getInstance())
+        val text = findViewById<TextView>(R.id.link)
+        text.movementMethod = LinkMovementMethod.getInstance()
     }
 }
