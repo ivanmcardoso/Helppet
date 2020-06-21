@@ -47,6 +47,7 @@ class UserFormFragment : Fragment() {
         }
         btUserFormSubmit.setOnClickListener {
             if (tiUserFormUserName.text.isFilled && tiUserFormPassword.text.isFilled && image.isNotEmpty()) {
+                pbUserForm.visibility = View.VISIBLE
                 FirebaseConfig.getFireBaseAuth()
                     .createUserWithEmailAndPassword(
                         tiUserFormUserName.text.toString(),
@@ -67,7 +68,7 @@ class UserFormFragment : Fragment() {
                                                         photoUrl
                                                     )?.also {
                                                         addOnSuccessListener {
-                                                            shortToast("Sucesso")
+                                                            pbUserForm.visibility = View.GONE
                                                             fragmentManager?.beginTransaction()
                                                                 ?.replace(
                                                                     R.id.flLogin,
@@ -75,18 +76,18 @@ class UserFormFragment : Fragment() {
                                                                 )
                                                                 ?.commit()
                                                         }
-                                                        addOnFailureListener { shortToast("falha") }
+                                                        addOnFailureListener {failure() }
                                                     }
                                                 }
-                                                addOnFailureListener { shortToast("falha") }
+                                                addOnFailureListener {failure() }
                                             }
                                         }
 
-                                        addOnFailureListener { shortToast("falha") }
+                                        addOnFailureListener { failure() }
                                     }
                                 }
                         }
-                        addOnFailureListener { shortToast("falha") }
+                        addOnFailureListener {failure() }
 
                     }
 
@@ -94,6 +95,10 @@ class UserFormFragment : Fragment() {
         }
     }
 
+    fun failure() {
+        pbUserForm.visibility = View.GONE
+        shortToast("falha")
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
