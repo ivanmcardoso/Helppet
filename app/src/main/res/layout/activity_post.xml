@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPostStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPostEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tvPostTitle"
+        android:text="@string/DID_SEE_ABANDONED_PET"
+        app:layout_constraintStart_toStartOf="@id/glPostStart"
+        app:layout_constraintEnd_toEndOf="@id/glPostEnd"
+        android:layout_width="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ivPostPetPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvPostTitle"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:background="@color/lightGray"
+        android:layout_height="200dp"
+        android:contentDescription="@string/foto_do_pet"
+        app:layout_constraintStart_toStartOf="@+id/glPostStart"
+        app:layout_constraintEnd_toEndOf="@id/glPostEnd"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPostLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintEnd_toEndOf="@id/glPostEnd"
+        app:layout_constraintStart_toStartOf="@id/glPostStart"
+        app:layout_constraintTop_toBottomOf="@id/ivPostPetPhoto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiPostLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/location" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btPostDone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pronto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glPostEnd"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/glPostStart"
+        app:layout_constraintTop_toBottomOf="@+id/tilPostLocation"
+        app:layout_constraintVertical_bias="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
