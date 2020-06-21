@@ -35,7 +35,7 @@ class PostAdapter (private val postList: List<Post>,
     override fun getItemCount() = postList.size
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        holder?.let {
+        holder.let {
             it.bindView(postList[position]) { post -> onItemClick(post) }
         }
     }

@@ -80,7 +80,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEndLogin"
         app:layout_constraintStart_toStartOf="@+id/guidelineStartLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btLoginSubmit" />
+        app:layout_constraintTop_toBottomOf="@+id/btLoginSubmit"
+        android:focusable="true" />
 
     <ProgressBar
         android:id="@+id/pbLogin"

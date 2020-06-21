@@ -27,7 +27,7 @@
             android:value="@string/map_key" />
 
         <activity android:name=".activity.OngsActivity" android:parentActivityName=".activity.HomeActivity"></activity>
-        <activity android:name=".denuncia" />
+        <activity android:name=".Denuncia" />
         <activity android:name=".activity.LoginActivity"
             android:launchMode="singleTop">
             <intent-filter>

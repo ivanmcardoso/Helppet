@@ -1,8 +1,6 @@
 package com.hefesto.helppet.fragment
 
-import android.app.Activity
 import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +14,7 @@ import com.hefesto.helppet.utils.isFilled
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
-class LoginFragment(): Fragment() {
+class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         inflater.inflate(R.layout.fragment_login, container, false)
 

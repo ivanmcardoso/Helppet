@@ -5,23 +5,6 @@ import kotlin.math.cos
 import kotlin.math.sin
 
 object MathUtils {
-    fun distances(
-        lat1: Double,
-        lon1: Double,
-        lat2: Double,
-        lon2: Double
-    ): Double {
-        val theta = lon1 - lon2
-        var dist = (sin(deg2rad(lat1))
-                * sin(deg2rad(lat2))
-                + (cos(deg2rad(lat1))
-                * cos(deg2rad(lat2))
-                * cos(deg2rad(theta))))
-        dist = acos(dist)
-        dist = rad2deg(dist)
-        dist *= 60 * 1.1515
-        return dist
-    }
 
     private fun deg2rad(deg: Double): Double {
         return deg * Math.PI / 180.0
@@ -44,15 +27,15 @@ fun distance(
     val b1 = lat_b / pk
     val b2 = lng_b / pk
     val t1 =
-        Math.cos(a1) * Math.cos(a2) * Math.cos(
+        cos(a1) * cos(a2) * cos(
             b1
-        ) * Math.cos(b2)
+        ) * cos(b2)
     val t2 =
-        Math.cos(a1) * Math.sin(a2) * Math.cos(
+        cos(a1) * sin(a2) * cos(
             b1
-        ) * Math.sin(b2)
-    val t3 = Math.sin(a1) * Math.sin(b1)
-    val tt = Math.acos(t1 + t2 + t3)
+        ) * sin(b2)
+    val t3 = sin(a1) * sin(b1)
+    val tt = acos(t1 + t2 + t3)
     return 6366000 * tt
 }
 }
