@@ -24,14 +24,18 @@ class LoginFragment(): Fragment() {
         super.onActivityCreated(savedInstanceState)
         btLoginSubmit.setOnClickListener {
             if (tiLoginUserName.text.isFilled && tiLoginPassword.text.isFilled){
+                pbLogin.visibility = View.VISIBLE
                 FirebaseConfig.getFireBaseAuth().signInWithEmailAndPassword(
                     tiLoginUserName.text.toString(),
                     tiLoginPassword.text.toString()).apply {
                     addOnSuccessListener {
+                        pbLogin.visibility = View.GONE
                         startActivity(Intent(context, MainActivity::class.java))
                         Toast.makeText(context, "Sucesso", Toast.LENGTH_SHORT).show()
                     }
-                    addOnFailureListener { Toast.makeText(context, "Falha", Toast.LENGTH_SHORT).show() }
+                    addOnFailureListener {
+                        pbLogin.visibility = View.GONE
+                        Toast.makeText(context, "Falha", Toast.LENGTH_SHORT).show() }
                 }
             }
         }

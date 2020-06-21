@@ -52,6 +52,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tiLoginPassword"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/senha" />
@@ -80,4 +81,15 @@
         app:layout_constraintEnd_toStartOf="@+id/guidelineEndLogin"
         app:layout_constraintStart_toStartOf="@+id/guidelineStartLogin"
         app:layout_constraintTop_toBottomOf="@+id/btLoginSubmit" />
+
+    <ProgressBar
+        android:id="@+id/pbLogin"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="86dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
