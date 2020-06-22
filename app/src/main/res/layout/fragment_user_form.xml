@@ -71,6 +71,7 @@
                 android:id="@+id/tiUserFormPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:hint="@string/senha" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,7 +88,6 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiUserFormDescription"
-                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name" />

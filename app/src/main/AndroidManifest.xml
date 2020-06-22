@@ -25,7 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PostActivity" android:parentActivityName=".activity.HomeActivity"></activity>
+        <activity android:name=".activity.PostActivity" android:parentActivityName=".activity.HomeActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

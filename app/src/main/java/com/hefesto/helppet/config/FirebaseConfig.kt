@@ -5,8 +5,11 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+
 
 object FirebaseConfig {
     fun getFireBaseStorage (): StorageReference {
@@ -34,5 +37,9 @@ object FirebaseConfig {
     fun updateUser(name: String): Task<Void>? {
         UserProfileChangeRequest.Builder().setDisplayName(name).build()
             .also { return getCurrentUser()?.updateProfile(it) }
+    }
+
+    fun getDatabase(): DatabaseReference {
+        return FirebaseDatabase.getInstance().reference
     }
 }
