@@ -70,7 +70,7 @@ class OngsActivity : AppCompatActivity() {
 
     private fun createOngs() = mutableListOf(
         Ong(
-            "Nova era",
+            "Anjos na Rua",
             -3.097267,
             -60.026103
         )

@@ -22,4 +22,5 @@
     <string name="DID_SEE_ABANDONED_PET">Você avistou um pet abandonado?</string>
     <string name="pronto">Pronto</string>
     <string name="location">Localização</string>
+    <string name="description">Descrição</string>
 </resources>

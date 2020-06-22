@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostActivity">
+    tools:context=".activity.PostActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glPostStart"
@@ -58,6 +58,22 @@
             android:hint="@string/location" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPostDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/glPostEnd"
+        app:layout_constraintStart_toStartOf="@id/glPostStart"
+        app:layout_constraintTop_toBottomOf="@id/tilPostLocation">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiPostDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btPostDone"
         android:layout_width="0dp"
@@ -67,7 +83,18 @@
         app:layout_constraintEnd_toEndOf="@id/glPostEnd"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/glPostStart"
-        app:layout_constraintTop_toBottomOf="@+id/tilPostLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tilPostDescription"
         app:layout_constraintVertical_bias="0.8" />
+
+    <ProgressBar
+        android:id="@+id/pbPost"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
