@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hefesto.helppet.R
 import com.hefesto.helppet.model.Post
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item_post.view.*
 import java.util.*
 
@@ -23,7 +24,8 @@ class PostAdapter (private val postList: List<Post>,
             name.text = post.name
             time.text = DateUtils.getRelativeTimeSpanString(post.time.time, Calendar.getInstance().timeInMillis, DateUtils.MINUTE_IN_MILLIS)
             description.text = post.description
-
+            Picasso.get().load(post.petPhotoUrl).into(itemView.ivPetPhoto)
+            Picasso.get().load(post.userphotoUrl).into(itemView.ivProfilePicture)
         }
     }
 

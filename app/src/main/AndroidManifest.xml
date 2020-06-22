@@ -14,7 +14,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" tools:node="remove"/>
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:node="remove" />
 
     <application
         android:allowBackup="true"
@@ -23,12 +25,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.google.android.geo.API_KEY"
+        <activity android:name=".PostActivity" android:parentActivityName=".activity.HomeActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />
 
-        <activity android:name=".activity.OngsActivity" android:parentActivityName=".activity.HomeActivity"></activity>
+        <activity
+            android:name=".activity.OngsActivity"
+            android:parentActivityName=".activity.HomeActivity" />
         <activity android:name=".Denuncia" />
-        <activity android:name=".activity.LoginActivity"
+        <activity
+            android:name=".activity.LoginActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,9 +47,7 @@
         <activity
             android:name=".activity.HomeActivity"
             android:parentActivityName=".activity.MainActivity" />
-        <activity
-            android:name=".activity.MainActivity">
-        </activity>
+        <activity android:name=".activity.MainActivity"></activity>
     </application>
 
 </manifest>

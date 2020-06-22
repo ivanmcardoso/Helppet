@@ -39,52 +39,56 @@ class UserFormFragment : Fragment() {
             }
         }
         btUserFormSubmit.setOnClickListener {
-            if (tiUserFormUserName.text.isFilled && tiUserFormPassword.text.isFilled && image.isNotEmpty()) {
-                pbUserForm.visibility = View.VISIBLE
-                FirebaseConfig.getFireBaseAuth()
-                    .createUserWithEmailAndPassword(
-                        tiUserFormUserName.text.toString(),
-                        tiUserFormPassword.text.toString()
-                    ).apply {
-                        addOnSuccessListener(activity!!) {
-                            FirebaseConfig.getFireBaseStorage()
-                                .child("images")
-                                .child("profile")
-                                .child("${tiUserFormUserName.text.toString()}.jpeg")
-                                .apply {
-                                    putBytes(image).also {
-                                        addOnSuccessListener {
-                                            downloadUrl.apply {
-                                                addOnSuccessListener {photoUrl ->
-                                                    FirebaseConfig.updateUser(
-                                                        tiUserFormDescription.text.toString(),
-                                                        photoUrl
-                                                    )?.also {
-                                                        addOnSuccessListener {
-                                                            pbUserForm.visibility = View.GONE
-                                                            fragmentManager?.beginTransaction()
-                                                                ?.replace(
-                                                                    R.id.flLogin,
-                                                                    LoginFragment()
-                                                                )
-                                                                ?.commit()
-                                                        }
-                                                        addOnFailureListener {failure() }
+            submit()
+        }
+    }
+
+    private fun submit() {
+        if (tiUserFormUserName.text.isFilled && tiUserFormPassword.text.isFilled && image.isNotEmpty()) {
+            pbUserForm.visibility = View.VISIBLE
+            FirebaseConfig.getFireBaseAuth()
+                .createUserWithEmailAndPassword(
+                    tiUserFormUserName.text.toString(),
+                    tiUserFormPassword.text.toString()
+                ).apply {
+                    addOnSuccessListener(activity!!) {
+                        FirebaseConfig.getFireBaseStorage()
+                            .child("images")
+                            .child("profile")
+                            .child("${tiUserFormUserName.text.toString()}.jpeg")
+                            .apply {
+                                putBytes(image).also {
+                                    addOnSuccessListener {
+                                        downloadUrl.apply {
+                                            addOnSuccessListener { photoUrl ->
+                                                FirebaseConfig.updateUser(
+                                                    tiUserFormDescription.text.toString(),
+                                                    photoUrl
+                                                )?.also {
+                                                    addOnSuccessListener {
+                                                        pbUserForm.visibility = View.GONE
+                                                        fragmentManager?.beginTransaction()
+                                                            ?.replace(
+                                                                R.id.flLogin,
+                                                                LoginFragment()
+                                                            )
+                                                            ?.commit()
                                                     }
+                                                    addOnFailureListener { failure() }
                                                 }
-                                                addOnFailureListener {failure() }
                                             }
+                                            addOnFailureListener { failure() }
                                         }
-
-                                        addOnFailureListener { failure() }
                                     }
+
+                                    addOnFailureListener { failure() }
                                 }
-                        }
-                        addOnFailureListener {failure() }
-
+                            }
                     }
+                    addOnFailureListener { failure() }
 
-            }
+                }
+
         }
     }
 
